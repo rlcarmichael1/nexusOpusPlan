@@ -58,8 +58,8 @@ export const config = {
   // Security settings
   security: {
     corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-    rateLimitWindowMs: 15 * 60 * 1000, // 15 minutes
-    rateLimitMax: 100, // requests per window
+    rateLimitWindowMs: 60 * 1000, // 1 minute
+    rateLimitMax: process.env.NODE_ENV === 'development' ? 1000 : 100, // Much higher for dev
   },
 
   // Article locking settings

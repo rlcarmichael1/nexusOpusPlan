@@ -1,0 +1,16 @@
+{
+  "id": "77279a9b-7f37-4944-b934-99d54c59383f",
+  "articleId": "1ed469d2-0b8d-4310-ab09-2dee86067502",
+  "version": 1,
+  "briefTitle": "This is Rob's first article",
+  "detailedDescription": "<p>This is a test article.</p>",
+  "category": "96970f09-b1d7-47e1-8d2a-c612a48ee18d",
+  "tags": [],
+  "relatedArticles": [],
+  "status": "draft",
+  "changedBy": "editor-1",
+  "changedByName": "Editor User",
+  "changedAt": "2026-01-30T06:28:19.259Z",
+  "changeReason": "Initial creation",
+  "changeSummary": "Initial version created"
+}

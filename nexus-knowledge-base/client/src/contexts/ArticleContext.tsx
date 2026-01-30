@@ -88,10 +88,10 @@ function articleReducer(state: ArticleState, action: ArticleAction): ArticleStat
       return {
         ...state,
         articles: action.payload.data,
-        totalCount: action.payload.total,
-        currentPage: action.payload.page,
-        totalPages: action.payload.pages,
-        pageSize: action.payload.limit,
+        totalCount: action.payload.pagination.totalItems,
+        currentPage: action.payload.pagination.page,
+        totalPages: action.payload.pagination.totalPages,
+        pageSize: action.payload.pagination.limit,
         isLoading: false,
       };
     case 'FETCH_ERROR':

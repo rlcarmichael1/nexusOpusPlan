@@ -121,10 +121,13 @@ export function AuthProvider({ children, defaultUserId = 'editor-1' }: AuthProvi
   const login = useCallback(async (userId: string) => {
     dispatch({ type: 'AUTH_START' });
     try {
+      console.log('[Auth] Setting mock user:', userId);
       authService.setMockUser(userId);
       const response = await authService.getCurrentUser();
+      console.log('[Auth] Login response:', response);
       dispatch({ type: 'AUTH_SUCCESS', payload: response.user });
     } catch (error) {
+      console.error('[Auth] Login error:', error);
       dispatch({ type: 'AUTH_ERROR', payload: 'Failed to authenticate' });
     }
   }, []);
@@ -141,14 +144,19 @@ export function AuthProvider({ children, defaultUserId = 'editor-1' }: AuthProvi
    * Switch to a different role/user
    */
   const switchRole = useCallback(async (userId?: string, role?: UserRole) => {
+    console.log('[Auth] Switching role to:', userId, role);
     dispatch({ type: 'AUTH_START' });
     try {
-      const response = await authService.switchRole({ userId, role });
+      // Set the mock user header FIRST so subsequent API calls use it
       if (userId) {
         authService.setMockUser(userId);
       }
+      // Now fetch the user data with the new auth header
+      const response = await authService.getCurrentUser();
+      console.log('[Auth] Switch role response:', response);
       dispatch({ type: 'AUTH_SUCCESS', payload: response.user });
     } catch (error) {
+      console.error('[Auth] Switch role error:', error);
       dispatch({ type: 'AUTH_ERROR', payload: 'Failed to switch role' });
     }
   }, []);
@@ -159,9 +167,10 @@ export function AuthProvider({ children, defaultUserId = 'editor-1' }: AuthProvi
   const fetchRoles = useCallback(async () => {
     try {
       const roles = await authService.getRoles();
+      console.log('[Auth] Fetched roles:', roles);
       dispatch({ type: 'SET_ROLES', payload: roles });
     } catch (error) {
-      console.error('Failed to fetch roles:', error);
+      console.error('[Auth] Failed to fetch roles:', error);
     }
   }, []);
 

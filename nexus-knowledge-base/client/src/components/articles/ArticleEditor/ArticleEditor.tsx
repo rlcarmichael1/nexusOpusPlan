@@ -47,9 +47,9 @@ export function ArticleEditor() {
   const { isLocked, isOwnLock, lockedByUser, acquire, release } = useLock(id);
 
   const isNew = !id;
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [categoryId, setCategoryId] = useState('');
+  const [briefTitle, setBriefTitle] = useState('');
+  const [detailedDescription, setDetailedDescription] = useState('');
+  const [category, setCategory] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState('');
   const [changeReason, setChangeReason] = useState('');
@@ -74,9 +74,9 @@ export function ArticleEditor() {
   // Populate form when article loads
   useEffect(() => {
     if (currentArticle && id) {
-      setTitle(currentArticle.title);
-      setContent(currentArticle.content);
-      setCategoryId(currentArticle.categoryId || '');
+      setBriefTitle(currentArticle.briefTitle);
+      setDetailedDescription(currentArticle.detailedDescription);
+      setCategory(currentArticle.category || '');
       setTags(currentArticle.tags || []);
     }
   }, [currentArticle, id]);
@@ -115,13 +115,13 @@ export function ArticleEditor() {
         }
       };
     }
-  }, [hasUnsavedChanges, title, content, categoryId, tags]);
+  }, [hasUnsavedChanges, briefTitle, detailedDescription, category, tags]);
 
   const handleAutosave = async () => {
     if (!id || !lockAcquired) return;
     
     try {
-      await updateArticle(id, { title, content, categoryId: categoryId || undefined, tags });
+      await updateArticle(id, { briefTitle, detailedDescription, category, tags });
       setHasUnsavedChanges(false);
       addToast('Changes saved automatically', 'info');
     } catch (error) {
@@ -130,12 +130,12 @@ export function ArticleEditor() {
   };
 
   const handleContentChange = (value: string) => {
-    setContent(value);
+    setDetailedDescription(value);
     setHasUnsavedChanges(true);
   };
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value);
+    setBriefTitle(e.target.value);
     setHasUnsavedChanges(true);
   };
 
@@ -162,22 +162,27 @@ export function ArticleEditor() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!title.trim()) {
+    if (!briefTitle.trim()) {
       addToast('Title is required', 'error');
       return;
     }
 
-    if (!content.trim() || content === '<p><br></p>') {
+    if (!detailedDescription.trim() || detailedDescription === '<p><br></p>') {
       addToast('Content is required', 'error');
+      return;
+    }
+
+    if (!category) {
+      addToast('Category is required', 'error');
       return;
     }
 
     try {
       if (isNew) {
         const input: CreateArticleInput = {
-          title: title.trim(),
-          content,
-          categoryId: categoryId || undefined,
+          briefTitle: briefTitle.trim(),
+          detailedDescription,
+          category,
           tags,
         };
         const article = await createArticle(input);
@@ -185,9 +190,9 @@ export function ArticleEditor() {
         navigate(`/articles/${article.id}`);
       } else if (id) {
         const input: UpdateArticleInput = {
-          title: title.trim(),
-          content,
-          categoryId: categoryId || undefined,
+          briefTitle: briefTitle.trim(),
+          detailedDescription,
+          category,
           tags,
         };
         await updateArticle(id, input, changeReason || undefined);
@@ -293,7 +298,7 @@ export function ArticleEditor() {
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input
           label="Title"
-          value={title}
+          value={briefTitle}
           onChange={handleTitleChange}
           placeholder="Enter article title"
           required
@@ -303,11 +308,12 @@ export function ArticleEditor() {
           <Select
             label="Category"
             options={categoryOptions}
-            value={categoryId}
+            value={category}
             onChange={(e) => {
-              setCategoryId(e.target.value);
+              setCategory(e.target.value);
               setHasUnsavedChanges(true);
             }}
+            required
           />
         </div>
 
@@ -345,7 +351,7 @@ export function ArticleEditor() {
           <div className={styles.editor}>
             <ReactQuill
               theme="snow"
-              value={content}
+              value={detailedDescription}
               onChange={handleContentChange}
               modules={quillModules}
               formats={quillFormats}

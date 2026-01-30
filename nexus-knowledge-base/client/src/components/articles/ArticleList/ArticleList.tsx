@@ -62,21 +62,27 @@ export function ArticleList() {
 
   const debouncedSearch = useDebounce(searchQuery, 300);
 
-  // Initial fetch
+  // Initial fetch - only once on mount
   useEffect(() => {
     searchArticles();
     fetchTags();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Search on debounced query change
   useEffect(() => {
+    // Skip initial render
+    if (debouncedSearch === '' && selectedStatus === '' && selectedCategory === '') {
+      return;
+    }
     searchArticles({
       query: debouncedSearch || undefined,
       status: selectedStatus as ArticleStatus || undefined,
       category: selectedCategory || undefined,
       page: 1,
     });
-  }, [debouncedSearch, selectedStatus, selectedCategory, searchArticles]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedSearch, selectedStatus, selectedCategory]);
 
   const handlePageChange = useCallback(
     (page: number) => {

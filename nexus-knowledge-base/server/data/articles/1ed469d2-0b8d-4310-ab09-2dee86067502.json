@@ -1,0 +1,18 @@
+{
+  "id": "1ed469d2-0b8d-4310-ab09-2dee86067502",
+  "briefTitle": "This is Rob's first article",
+  "detailedDescription": "<p>This is a test article.</p>",
+  "category": "96970f09-b1d7-47e1-8d2a-c612a48ee18d",
+  "tags": [],
+  "relatedArticles": [],
+  "status": "draft",
+  "authorId": "editor-1",
+  "authorName": "Editor User",
+  "createdAt": "2026-01-30T06:28:19.244Z",
+  "updatedAt": "2026-01-30T06:28:19.244Z",
+  "version": 1,
+  "metadata": {
+    "viewCount": 0,
+    "contentFormat": "richtext"
+  }
+}
