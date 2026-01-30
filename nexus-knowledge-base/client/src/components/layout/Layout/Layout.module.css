@@ -1,0 +1,45 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Standalone mode */
+.standalone {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.standalone .main {
+  padding: 2rem;
+}
+
+/* Sidebar mode */
+.sidebar {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar .main {
+  padding: 1rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+}
+
+/* With sidebar navigation */
+.withNav {
+  display: flex;
+  flex-direction: row;
+}
+
+.withNav .main {
+  flex: 1;
+  min-width: 0;
+}

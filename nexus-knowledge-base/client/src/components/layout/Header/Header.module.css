@@ -1,0 +1,196 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #111827;
+}
+
+.logoIcon {
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logoText {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Role selector */
+.roleSelector {
+  position: relative;
+}
+
+.roleSelectorButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #374151;
+  transition: border-color 0.2s;
+}
+
+.roleSelectorButton:hover {
+  border-color: #d1d5db;
+}
+
+.roleDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.25rem;
+  min-width: 200px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+}
+
+.roleOption {
+  display: block;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #374151;
+  transition: background-color 0.15s;
+}
+
+.roleOption:hover {
+  background-color: #f3f4f6;
+}
+
+.roleOption.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.roleOptionName {
+  display: block;
+  font-weight: 500;
+}
+
+.roleOptionRole {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.125rem;
+}
+
+/* Layout toggle */
+.layoutToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #f3f4f6;
+}
+
+.layoutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #6b7280;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.layoutButton:hover {
+  color: #374151;
+}
+
+.layoutButton.active {
+  background-color: white;
+  color: #2563eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar mode */
+.sidebar {
+  padding: 0.5rem 1rem;
+}
+
+.sidebar .logoText {
+  display: none;
+}
+
+.sidebar .userName {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .logoText {
+    display: none;
+  }
+
+  .userName {
+    display: none;
+  }
+}

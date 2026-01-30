@@ -1,0 +1,79 @@
+{
+  "articles": [
+    {
+      "id": "sample-password-reset",
+      "title": "How to Reset Your Password",
+      "content": "<h2>Password Reset Procedure</h2><p>If you've forgotten your password or need to reset it for security reasons, follow these steps:</p><h3>Method 1: Self-Service Portal</h3><ol><li>Navigate to the <strong>Self-Service Portal</strong> at portal.company.com</li><li>Click on \"Forgot Password\"</li><li>Enter your username or email address</li><li>Check your email for a password reset link</li><li>Click the link and create a new password</li></ol><h3>Method 2: Contact Service Desk</h3><p>If you cannot access the self-service portal, contact the Service Desk:</p><ul><li><strong>Phone:</strong> 1-800-HELP</li><li><strong>Email:</strong> servicedesk@company.com</li><li><strong>Chat:</strong> Available 24/7</li></ul><h3>Password Requirements</h3><p>Your new password must meet these requirements:</p><ul><li>At least 12 characters long</li><li>Include uppercase and lowercase letters</li><li>Include at least one number</li><li>Include at least one special character</li><li>Cannot be a previously used password</li></ul><blockquote>Note: Passwords expire every 90 days. You will receive a reminder 14 days before expiration.</blockquote>",
+      "excerpt": "Step-by-step guide for resetting your password using the self-service portal or contacting the Service Desk.",
+      "status": "published",
+      "categoryId": "service-requests",
+      "tags": ["password", "security", "self-service", "authentication"],
+      "authorId": "author-1",
+      "version": 1,
+      "viewCount": 245,
+      "createdAt": "2024-01-15T10:00:00.000Z",
+      "updatedAt": "2024-01-15T10:00:00.000Z",
+      "publishedAt": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "sample-vpn-troubleshooting",
+      "title": "VPN Connection Troubleshooting Guide",
+      "content": "<h2>VPN Troubleshooting</h2><p>This guide helps resolve common VPN connectivity issues.</p><h3>Common Issues and Solutions</h3><h4>Issue 1: Cannot Connect to VPN</h4><p><strong>Symptoms:</strong> VPN client shows \"Connection Failed\" or times out</p><p><strong>Solutions:</strong></p><ol><li>Verify your internet connection is working</li><li>Check that you're using the correct VPN server address</li><li>Ensure your credentials are correct</li><li>Try disconnecting and reconnecting</li><li>Restart the VPN client application</li></ol><h4>Issue 2: Connected but No Network Access</h4><p><strong>Symptoms:</strong> VPN shows connected but cannot access internal resources</p><p><strong>Solutions:</strong></p><ol><li>Check DNS settings are configured correctly</li><li>Verify split tunneling is configured properly</li><li>Try accessing resources by IP address instead of hostname</li><li>Contact network team if issue persists</li></ol><h4>Issue 3: Slow VPN Performance</h4><p><strong>Symptoms:</strong> Applications are slow or unresponsive over VPN</p><p><strong>Solutions:</strong></p><ul><li>Try a different VPN server closer to your location</li><li>Close bandwidth-heavy applications</li><li>Check your home network speed</li><li>Use wired connection instead of WiFi if possible</li></ul><h3>Escalation</h3><p>If these steps don't resolve your issue, create an incident ticket with:</p><ul><li>Error messages received</li><li>Steps already attempted</li><li>Your location and network details</li></ul>",
+      "excerpt": "Comprehensive troubleshooting guide for resolving VPN connectivity issues including common problems and solutions.",
+      "status": "published",
+      "categoryId": "network-issues",
+      "tags": ["vpn", "network", "connectivity", "troubleshooting", "remote-work"],
+      "authorId": "editor-1",
+      "version": 2,
+      "viewCount": 523,
+      "createdAt": "2024-01-10T08:00:00.000Z",
+      "updatedAt": "2024-01-20T14:30:00.000Z",
+      "publishedAt": "2024-01-10T08:30:00.000Z"
+    },
+    {
+      "id": "sample-incident-priority",
+      "title": "Incident Priority Matrix",
+      "content": "<h2>Understanding Incident Priorities</h2><p>This article explains how incidents are prioritized and the expected response times for each priority level.</p><h3>Priority Levels</h3><table><thead><tr><th>Priority</th><th>Impact</th><th>Urgency</th><th>Response Time</th><th>Resolution Target</th></tr></thead><tbody><tr><td><strong>P1 - Critical</strong></td><td>Enterprise-wide</td><td>Immediate</td><td>15 minutes</td><td>4 hours</td></tr><tr><td><strong>P2 - High</strong></td><td>Department-wide</td><td>High</td><td>30 minutes</td><td>8 hours</td></tr><tr><td><strong>P3 - Medium</strong></td><td>Limited users</td><td>Medium</td><td>2 hours</td><td>24 hours</td></tr><tr><td><strong>P4 - Low</strong></td><td>Single user</td><td>Low</td><td>4 hours</td><td>72 hours</td></tr></tbody></table><h3>Priority Determination</h3><p>Priority is determined by combining <strong>Impact</strong> and <strong>Urgency</strong>:</p><ul><li><strong>Impact</strong>: How many users/services are affected</li><li><strong>Urgency</strong>: How critical is the affected service</li></ul><h3>Examples</h3><h4>P1 Examples:</h4><ul><li>Email system down for entire organization</li><li>Critical production application unavailable</li><li>Security breach detected</li></ul><h4>P2 Examples:</h4><ul><li>Major application slow for department</li><li>Network outage affecting one building</li></ul><h4>P3 Examples:</h4><ul><li>Non-critical application issue for small team</li><li>Printer not working for multiple users</li></ul><h4>P4 Examples:</h4><ul><li>Single user cannot print</li><li>Request for software installation</li></ul>",
+      "excerpt": "Guide to understanding incident priority levels, response times, and how priorities are determined based on impact and urgency.",
+      "status": "published",
+      "categoryId": "incident-management",
+      "tags": ["incident", "priority", "sla", "response-time", "itsm"],
+      "authorId": "editor-1",
+      "version": 1,
+      "viewCount": 892,
+      "createdAt": "2024-01-05T09:00:00.000Z",
+      "updatedAt": "2024-01-05T09:00:00.000Z",
+      "publishedAt": "2024-01-05T09:30:00.000Z"
+    },
+    {
+      "id": "sample-change-request",
+      "title": "How to Submit a Change Request",
+      "content": "<h2>Change Request Process</h2><p>All changes to production systems must go through the Change Management process. This ensures changes are properly reviewed, approved, and documented.</p><h3>Types of Changes</h3><ul><li><strong>Standard Changes:</strong> Pre-approved, low-risk changes (e.g., routine patching)</li><li><strong>Normal Changes:</strong> Changes that require CAB review</li><li><strong>Emergency Changes:</strong> Urgent changes to resolve critical incidents</li></ul><h3>Submitting a Change Request</h3><ol><li>Log into the ITSM portal</li><li>Navigate to Change Management → New Change Request</li><li>Fill in required fields:<ul><li>Change Title and Description</li><li>Business Justification</li><li>Risk Assessment</li><li>Implementation Plan</li><li>Backout Plan</li><li>Testing Plan</li></ul></li><li>Attach any supporting documentation</li><li>Submit for approval</li></ol><h3>Change Advisory Board (CAB)</h3><p>Normal changes are reviewed weekly by the CAB. Meeting schedule:</p><ul><li><strong>Tuesdays:</strong> 10:00 AM - Infrastructure changes</li><li><strong>Thursdays:</strong> 2:00 PM - Application changes</li></ul><h3>Lead Times</h3><table><thead><tr><th>Change Type</th><th>Minimum Lead Time</th></tr></thead><tbody><tr><td>Standard</td><td>24 hours</td></tr><tr><td>Normal</td><td>5 business days</td></tr><tr><td>Emergency</td><td>ASAP (post-approval required)</td></tr></tbody></table>",
+      "excerpt": "Complete guide to submitting change requests including types of changes, required information, and CAB review process.",
+      "status": "published",
+      "categoryId": "change-management",
+      "tags": ["change-management", "cab", "itil", "process", "governance"],
+      "authorId": "author-1",
+      "version": 3,
+      "viewCount": 412,
+      "createdAt": "2024-01-08T11:00:00.000Z",
+      "updatedAt": "2024-02-01T16:00:00.000Z",
+      "publishedAt": "2024-01-08T11:30:00.000Z"
+    },
+    {
+      "id": "sample-draft-article",
+      "title": "New Employee Onboarding Checklist (DRAFT)",
+      "content": "<h2>IT Onboarding Checklist</h2><p>This checklist ensures new employees receive all necessary IT resources and access.</p><h3>Day 1 Tasks</h3><ul><li>[ ] Workstation setup and configuration</li><li>[ ] Email account creation</li><li>[ ] Active Directory account</li><li>[ ] VPN access (if remote)</li><li>[ ] Required software installation</li></ul><h3>Week 1 Tasks</h3><ul><li>[ ] Security awareness training</li><li>[ ] Department-specific application access</li><li>[ ] SharePoint site access</li><li>[ ] Teams/Slack channel additions</li></ul><p><em>This article is still being developed. Check back for updates.</em></p>",
+      "excerpt": "Draft checklist for IT onboarding tasks for new employees.",
+      "status": "draft",
+      "categoryId": "knowledge-procedures",
+      "tags": ["onboarding", "new-hire", "checklist", "hr"],
+      "authorId": "author-1",
+      "version": 1,
+      "viewCount": 15,
+      "createdAt": "2024-02-10T14:00:00.000Z",
+      "updatedAt": "2024-02-10T14:00:00.000Z",
+      "publishedAt": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.bordered {
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+}
+
+.hoverable {
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.hoverable:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.cardHeader {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cardSubtitle {
+  margin: 0;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.cardBody {
+  padding: 1.25rem;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.cardFooter {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Compact variant for sidebar mode */
+.compact .cardHeader {
+  padding: 0.75rem 1rem;
+}
+
+.compact .cardBody {
+  padding: 1rem;
+}
+
+.compact .cardFooter {
+  padding: 0.75rem 1rem;
+}
+
+.compact .cardTitle {
+  font-size: 0.875rem;
+}

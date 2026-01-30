@@ -1,0 +1,104 @@
+{
+  "categories": [
+    {
+      "id": "incident-management",
+      "name": "Incident Management",
+      "description": "Knowledge articles related to handling and resolving incidents",
+      "slug": "incident-management",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "problem-management",
+      "name": "Problem Management",
+      "description": "Root cause analysis and problem resolution procedures",
+      "slug": "problem-management",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "change-management",
+      "name": "Change Management",
+      "description": "Change request procedures and best practices",
+      "slug": "change-management",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "service-requests",
+      "name": "Service Requests",
+      "description": "How-to guides for common service requests",
+      "slug": "service-requests",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "configuration-management",
+      "name": "Configuration Management",
+      "description": "CMDB and configuration item documentation",
+      "slug": "configuration-management",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "knowledge-procedures",
+      "name": "Knowledge Procedures",
+      "description": "Standard operating procedures and workflows",
+      "slug": "knowledge-procedures",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "troubleshooting",
+      "name": "Troubleshooting Guides",
+      "description": "Step-by-step troubleshooting guides for common issues",
+      "slug": "troubleshooting",
+      "parentId": null,
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "network-issues",
+      "name": "Network Issues",
+      "description": "Network connectivity and performance troubleshooting",
+      "slug": "network-issues",
+      "parentId": "troubleshooting",
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "application-issues",
+      "name": "Application Issues",
+      "description": "Application-specific troubleshooting",
+      "slug": "application-issues",
+      "parentId": "troubleshooting",
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "hardware-issues",
+      "name": "Hardware Issues",
+      "description": "Hardware diagnostics and troubleshooting",
+      "slug": "hardware-issues",
+      "parentId": "troubleshooting",
+      "articleCount": 0,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}

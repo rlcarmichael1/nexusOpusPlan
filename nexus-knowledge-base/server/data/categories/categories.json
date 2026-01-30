@@ -1,0 +1,82 @@
+[
+  {
+    "id": "5f58e139-63b8-4735-b864-7e09337a65b6",
+    "name": "Incident Resolution",
+    "description": "Articles related to resolving incidents and outages",
+    "order": 1,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "011c8edf-2afc-4bf1-8f01-b56ea48a8f3c",
+    "name": "Service Request",
+    "description": "How-to guides for common service requests",
+    "order": 2,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "10ca76bd-15d8-4d25-aeb9-43417b1bdde6",
+    "name": "Change Management",
+    "description": "Change procedures and documentation",
+    "order": 3,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "95384462-02b1-4e18-a799-f12a147ebfc5",
+    "name": "Problem Management",
+    "description": "Root cause analysis and known error documentation",
+    "order": 4,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "18eaa239-89ae-4d00-b35c-4c1b034329dd",
+    "name": "Asset Management",
+    "description": "Hardware and software asset information",
+    "order": 5,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "52f95b98-8796-44d9-a839-641507ee7472",
+    "name": "Security",
+    "description": "Security policies and procedures",
+    "order": 6,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "9f5d6bd2-19a0-449c-a606-af4e3b1042ec",
+    "name": "Network",
+    "description": "Network infrastructure and connectivity",
+    "order": 7,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "8c8ed5ef-b167-4a34-87c5-e7eaa1560baf",
+    "name": "Applications",
+    "description": "Application-specific documentation",
+    "order": 8,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "33ed0ab2-c34b-45e0-b8d0-e3bec2379b25",
+    "name": "End User Support",
+    "description": "General end-user support articles",
+    "order": 9,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  },
+  {
+    "id": "96970f09-b1d7-47e1-8d2a-c612a48ee18d",
+    "name": "Training",
+    "description": "Training materials and tutorials",
+    "order": 10,
+    "articleCount": 0,
+    "createdAt": "2026-01-30T05:06:39.456Z"
+  }
+]
