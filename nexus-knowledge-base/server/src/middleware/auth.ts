@@ -17,29 +17,29 @@ export interface AuthenticatedRequest extends Request {
  * In production, this would be replaced with actual authentication
  */
 const MOCK_USERS: Record<string, User> = {
-  'reader-user': {
-    id: 'reader-001',
+  'reader-1': {
+    id: 'reader-1',
     email: 'reader@example.com',
     displayName: 'Reader User',
     role: 'reader',
     createdAt: '2024-01-01T00:00:00.000Z',
   },
-  'actor-user': {
-    id: 'actor-001',
+  'actor-1': {
+    id: 'actor-1',
     email: 'actor@example.com',
     displayName: 'Actor User',
     role: 'actor',
     createdAt: '2024-01-01T00:00:00.000Z',
   },
-  'author-user': {
-    id: 'author-001',
+  'author-1': {
+    id: 'author-1',
     email: 'author@example.com',
     displayName: 'Author User',
     role: 'author',
     createdAt: '2024-01-01T00:00:00.000Z',
   },
-  'editor-user': {
-    id: 'editor-001',
+  'editor-1': {
+    id: 'editor-1',
     email: 'editor@example.com',
     displayName: 'Editor User',
     role: 'editor',
@@ -48,7 +48,7 @@ const MOCK_USERS: Record<string, User> = {
 };
 
 // Current mock user session (for development)
-let currentMockUserId: string = 'author-user';
+let currentMockUserId: string = 'editor-1';
 
 /**
  * Set the current mock user (for development role switching)
