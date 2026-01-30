@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 import styles from './ArticleCard.module.css';
-import { ArticleSummary, ARTICLE_STATUS_CONFIG } from '../../../types';
+import { ArticleSummary, STATUS_CONFIG } from '../../../types';
 import { useUI, useCategories } from '../../../contexts';
 import { Badge } from '../../common';
 
@@ -23,7 +23,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
   const { getCategoryById } = useCategories();
 
   const category = article.categoryId ? getCategoryById(article.categoryId) : null;
-  const statusConfig = ARTICLE_STATUS_CONFIG[article.status];
+  const statusConfig = STATUS_CONFIG[article.status];
 
   const handleClick = () => {
     navigate(`/articles/${article.id}`);

@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import styles from './ArticleView.module.css';
 import { useArticles, useCategories, useAuth, useUI } from '../../../contexts';
 import { useLock } from '../../../hooks';
-import { ARTICLE_STATUS_CONFIG } from '../../../types';
+import { STATUS_CONFIG } from '../../../types';
 import { Button, Badge, Spinner, ConfirmDialog } from '../../common';
 import { CommentSection } from '../../comments';
 
@@ -122,7 +122,7 @@ export function ArticleView() {
   const categoryPath = currentArticle.categoryId
     ? getCategoryPath(currentArticle.categoryId)
     : [];
-  const statusConfig = ARTICLE_STATUS_CONFIG[currentArticle.status];
+  const statusConfig = STATUS_CONFIG[currentArticle.status];
   const canEditArticle = canEdit(currentArticle.authorId);
   const showLockWarning = isLocked && !isOwnLock;
 
