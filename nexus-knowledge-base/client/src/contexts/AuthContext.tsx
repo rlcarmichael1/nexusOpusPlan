@@ -123,7 +123,7 @@ export function AuthProvider({ children, defaultUserId = 'editor-1' }: AuthProvi
     try {
       authService.setMockUser(userId);
       const response = await authService.getCurrentUser();
-      dispatch({ type: 'AUTH_SUCCESS', payload: response.data.user });
+      dispatch({ type: 'AUTH_SUCCESS', payload: response.user });
     } catch (error) {
       dispatch({ type: 'AUTH_ERROR', payload: 'Failed to authenticate' });
     }
@@ -158,8 +158,8 @@ export function AuthProvider({ children, defaultUserId = 'editor-1' }: AuthProvi
    */
   const fetchRoles = useCallback(async () => {
     try {
-      const response = await authService.getRoles();
-      dispatch({ type: 'SET_ROLES', payload: response.data });
+      const roles = await authService.getRoles();
+      dispatch({ type: 'SET_ROLES', payload: roles });
     } catch (error) {
       console.error('Failed to fetch roles:', error);
     }

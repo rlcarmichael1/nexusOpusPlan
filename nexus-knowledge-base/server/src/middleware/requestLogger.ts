@@ -38,11 +38,16 @@ export function responseTimeMiddleware(
 ): void {
   const startTime = process.hrtime();
 
-  res.on('finish', () => {
+  // Override end to add the header before the response is sent
+  const originalEnd = res.end.bind(res);
+  res.end = function(chunk?: any, encoding?: any, callback?: any): Response {
     const diff = process.hrtime(startTime);
     const time = diff[0] * 1000 + diff[1] / 1000000;
-    res.setHeader('X-Response-Time', `${time.toFixed(2)}ms`);
-  });
+    if (!res.headersSent) {
+      res.setHeader('X-Response-Time', `${time.toFixed(2)}ms`);
+    }
+    return originalEnd(chunk, encoding, callback);
+  };
 
   next();
 }
